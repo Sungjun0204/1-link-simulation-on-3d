@@ -1,20 +1,24 @@
-% 3원 그래프에서 링크 1개를 그리는 코드
+% 3차원 그래프에서 링크 1개를 그리는 코드
+% The code that draw a link on 3-dimensions
 
 % Parameters 설정
-L1 = 1;     % 링크의 길이
-q1 = pi/4;   % xy평면에서의 각도
-r1 = pi/5;   % xy평면에서 z축 방향으로의 각도
+% Parameters Setting
+L1 = 1;     % 링크의 길이 Link's length
+q1 = pi/4;   % xy평면에서의 각도 Angle on xy plane
+r1 = pi/5;   % xy평면에서 z축 방향으로의 각도 Angle between xy plane and link L1 
 
 
 % 링크 1의 양 끝단 좌표 계산 및 행렬로 묶음
-x1 = L1*cos(r1)*cos(q1);   Px1 = [0 x1];      % x좌표
-y1 = L1*cos(r1)*sin(q1);   Py1 = [0 y1];      % y좌표
-z1 = L1*cos((pi/2)-r1);    Pz1 = [0 z1];      % z좌표
+% Calculate end effect's coordi.
+x1 = L1*cos(r1)*cos(q1);   Px1 = [0 x1];      % x coordi.
+y1 = L1*cos(r1)*sin(q1);   Py1 = [0 y1];      % y coordi.
+z1 = L1*cos((pi/2)-r1);    Pz1 = [0 z1];      % z coordi.
 
 
 
 
 % 시뮬레이션을 할 링크들을 띄울 plot 설정
+% Simulation plot setting that draw a link
 Fig = figure('Position', [300 300 600 600], 'Color', [1 1 1])
 Axis = axes('parent', Fig);
 hold on;
